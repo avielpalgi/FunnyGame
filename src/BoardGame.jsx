@@ -36,7 +36,10 @@ function BoardGame(props) {
     }
 
     useEffect(() => {
-
+        if (localStorage.getItem('ListScores') !== null) {
+            let list = JSON.parse(localStorage.getItem('ListScores'));
+            setListOfScores(list);
+        }
         GameAction();
 
     }, [])
@@ -101,6 +104,7 @@ function BoardGame(props) {
         let tempList = [...ListOfScores];
         tempList.push(AddToList);
         setListOfScores(tempList);
+        localStorage.setItem('ListScores',JSON.stringify(tempList));
         setBulbs([
             { id: 0, class: "none0" }, { id: 1, class: "none1" }, { id: 2, class: "none2" },
             { id: 3, class: "none3" }, { id: 4, class: "none4" }, { id: 5, class: "none5" }
