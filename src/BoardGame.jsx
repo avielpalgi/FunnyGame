@@ -68,7 +68,7 @@ function BoardGame(props) {
                 let tempBulbTsoShow = [...Bulbs];
                 tempBulbTsoShow[num.id] = { id: num.id, class: "none" + num.id }
                 setBulbs(tempBulbTsoShow);
-            }, 1000);
+            }, 500);
         }, 1500 * (i + 1));
     }
 
@@ -99,12 +99,13 @@ function BoardGame(props) {
         let time = new Date();
         let AddToList = {
             Score:CurrentScore,
-            Time: time.toLocaleTimeString()
+            Time: time.toLocaleString()
         }
         let tempList = [...ListOfScores];
         tempList.push(AddToList);
         setListOfScores(tempList);
         localStorage.setItem('ListScores',JSON.stringify(tempList));
+        sortAscending(tempList);
         setBulbs([
             { id: 0, class: "none0" }, { id: 1, class: "none1" }, { id: 2, class: "none2" },
             { id: 3, class: "none3" }, { id: 4, class: "none4" }, { id: 5, class: "none5" }
@@ -113,8 +114,12 @@ function BoardGame(props) {
         setSelectedBulbs([]);
         setNum(0);
         setGameOver(true);
-        
     }
+    const sortAscending = (tempList) => {
+        tempList.sort((a, b) => a.Score - b.Score).reverse()    
+        setListOfScores(tempList);
+        console.log(tempList);
+      }
 
     function ShowBulbs() {
         return Bulbs.map(bulb => <Col className={bulb.class} id={"bulb" + bulb.id} onClick={() => { ClickAction(bulb) }}><FontAwesomeIcon icon={faCircle} /></Col>)
