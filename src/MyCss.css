@@ -1,0 +1,113 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    background-color: #f1f1f175;
+  }
+
+.Welcome{
+    text-align:-webkit-center;
+}
+.inputName{
+    width: 70%;
+}
+.btn{
+    width: 20%;
+}
+
+.Header{
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(172, 172, 172, 0.336);
+}
+.Header h1{
+    align-items: center;
+    text-align: center;
+}
+.RowGame{
+    height: 100vh;
+}
+
+.sidebar{
+    padding: 10px;
+    border-right: 1px solid rgba(172, 172, 172, 0.336);
+}
+.sidebar h2{
+    font-size: 20px;
+}
+
+.bulbs{
+    font-size: 80px;
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, 100px);
+}
+.ulList{
+    margin: 20px;
+    text-align: left;
+}
+.none0 .fa-circle {
+    border-radius: 50%;
+    border: 1px solid rgb(244, 255, 144);
+    color: white;
+}
+.none1 .fa-circle {
+    border-radius: 50%;
+    border: 1px solid rgb(160, 255, 147);
+    color: white;
+}
+.none2 .fa-circle {
+    border-radius: 50%;
+    border: 1px solid rgb(151, 255, 220);
+    color: white;
+}
+.none3 .fa-circle {
+    border-radius: 50%;
+    border: 1px solid rgb(156, 187, 255);
+    color: white;
+}
+.none4 .fa-circle {
+    border-radius: 50%;
+    border: 1px solid rgb(255, 154, 250);
+    color: white;
+}
+.none5 .fa-circle {
+    border-radius: 50%;
+    border: 1px solid rgb(255, 148, 148);
+    color: white;
+}
+
+
+.play0{
+    color: rgb(244, 255, 144);
+}
+.play1{
+    color: rgb(160, 255, 147);
+}
+.play2{
+    color: rgb(151, 255, 220);
+}
+.play3{
+    color: rgb(156, 187, 255);
+}
+.play4{
+    color: rgb(255, 154, 250);
+}
+.play5{
+    color:rgb(255, 148, 148);
+}
+
+.Footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #cdcdcd;
+    color: white;
+    text-align: center;
+}
+.Footer a{
+    color: white;
+}
+.Footer a:hover{
+    color: rgba(69, 108, 182, 0.7);
+}
